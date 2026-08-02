@@ -1,0 +1,25 @@
+import java.util.*;
+public class main{
+    public static void main(String[] args){
+        Scanner scan=new Scanner(System.in);
+        int num=scan.nextInt();
+        int arr[]=new int[num];
+        int s[]=new int[num];
+        int t[]=new int[num];
+        int ansa[]=new int[num];
+        for(int i=0;i<num;i++){
+            arr[i]=scan.nextInt();
+            s[i]=scan.nextInt();
+            t[i]=scan.nextInt();
+        }
+        for(int i=0;i<num;i++){
+            int sum=s[i]+t[i];
+            ansa[i]=sum;
+        }
+        Arrays.sort(ansa);
+        for(int i=0;i<num;i++){
+            for(int j=0;j<num;j++){
+                if(ansa[i]==s[j]+t[j]){
+                    System.out.println(arr[j]+" "+s[j]+" "+t[j]);}
+}}}
+}
