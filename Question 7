@@ -1,0 +1,21 @@
+class UserMainCode
+{
+    public int findKey(int input1, int input2, int input3)
+    {
+        int thousands = input1 / 1000;
+        int hundreds = (input2 / 100) % 10;
+
+        int min = 9;
+        int temp = input3;
+
+        while (temp > 0)
+        {
+            int digit = temp % 10;
+            if (digit < min)
+                min = digit;
+            temp = temp / 10;
+        }
+
+        return (thousands * hundreds) + min;
+    }
+}
