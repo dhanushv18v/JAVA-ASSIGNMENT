@@ -1,21 +1,32 @@
-class UserMainCode
+```java
+class UserMainCode 
 {
-    public int findKey(int input1, int input2, int input3)
+    public int findKey(int input1, int input2, int input3) 
     {
-        int thousands = input1 / 1000;
-        int hundreds = (input2 / 100) % 10;
+        // Get the first digit of input1
+        int firstDigit = input1 / 1000;
 
-        int min = 9;
+        // Get the third digit of input2
+        int thirdDigit = (input2 / 100) % 10;
+
+        // Find the smallest digit in input3
+        int smallest = 9;
         int temp = input3;
 
-        while (temp > 0)
+        while (temp > 0) 
         {
             int digit = temp % 10;
-            if (digit < min)
-                min = digit;
+
+            if (digit < smallest) 
+            {
+                smallest = digit;
+            }
+
             temp = temp / 10;
         }
 
-        return (thousands * hundreds) + min;
+        // Calculate and return the key
+        return (firstDigit * thirdDigit) + smallest;
     }
 }
+```
